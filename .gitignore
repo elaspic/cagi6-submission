@@ -1,0 +1,16 @@
+__MACOSX
+_.DS_Store
+.~lock*
+._*
+
+.env
+.ipynb_checkpoints
+
+notebooks/*-gra*.ipynb
+
+notebooks/*/*
+!notebooks/*/*.dvc
+
+notebooks/**/*
+!notebooks/**/*.dvc
+

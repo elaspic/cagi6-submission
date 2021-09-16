@@ -1,0 +1,6 @@
+[core]
+    remote = myremote
+[cache]
+    type = "hardlink,symlink"
+['remote "myremote"']
+    url = /home/strokach/data/dvcstore
