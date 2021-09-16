@@ -1,4 +1,4 @@
 outs:
-- md5: 8cbc89dbb119dcac62875dc9d335621d
+- md5: a58c95152d9ab216956fc728cf7b5a7f
   size: 13673846266
   path: input-data-gby-protein.parquet
