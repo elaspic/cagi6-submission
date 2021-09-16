@@ -11,6 +11,6 @@ notebooks/*-gra*.ipynb
 notebooks/*/*
 !notebooks/*/*.dvc
 
-notebooks/**/*
-!notebooks/**/*.dvc
+notebooks/*/**.dvc
+!notebooks/*/**.dvc
 
