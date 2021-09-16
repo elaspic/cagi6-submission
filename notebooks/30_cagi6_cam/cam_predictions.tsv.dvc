@@ -1,0 +1,4 @@
+outs:
+- md5: 07f71c24b2d8a6cdc4bd8865b2bc56f3
+  size: 441
+  path: cam_predictions.tsv

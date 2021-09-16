@@ -1,0 +1,4 @@
+outs:
+- md5: 5cd0eeac41d3ca56c1b70b40a7e27625
+  size: 398
+  path: mapk1_predictions.tsv

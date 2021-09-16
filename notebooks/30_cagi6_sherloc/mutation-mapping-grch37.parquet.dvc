@@ -1,0 +1,4 @@
+outs:
+- md5: a35f298e8b41bda694eb7d932e0d1587
+  size: 3869833
+  path: mutation-mapping-grch37.parquet

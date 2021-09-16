@@ -1,0 +1,4 @@
+outs:
+- md5: 048c75c5013dac402f2e1c9425868a32
+  size: 495010
+  path: validation_variants.tsv

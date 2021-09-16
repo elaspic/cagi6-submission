@@ -1,0 +1,5 @@
+outs:
+- md5: 0fda125fa9c4b7957427f3c4819fbb03.dir
+  size: 5054306947
+  nfiles: 3254
+  path: mmseqs2

@@ -1,0 +1,4 @@
+outs:
+- md5: 09499c476c5ad243b812811cd68bc032
+  size: 1270095
+  path: uniprot-mapping-noncanon.parquet

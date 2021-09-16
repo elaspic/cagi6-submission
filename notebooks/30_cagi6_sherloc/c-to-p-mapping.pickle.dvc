@@ -1,0 +1,4 @@
+outs:
+- md5: 421cfda8bdf01da9421309848215006b
+  size: 21957480
+  path: c-to-p-mapping.pickle

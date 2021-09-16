@@ -1,0 +1,4 @@
+outs:
+- md5: 21827c1f07017ae2a139fa87d8b7a196
+  size: 26361214
+  path: c-to-p-mapping-grch37.pickle

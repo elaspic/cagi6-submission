@@ -1,0 +1,4 @@
+outs:
+- md5: d2449db84fe8488cfad726ed2527b3bd
+  size: 88979
+  path: validation.py

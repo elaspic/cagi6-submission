@@ -1,0 +1,4 @@
+outs:
+- md5: 3dbec4284917cdef61bbadc788fa2d7b
+  size: 1204315
+  path: validation-mapping-grch37.parquet

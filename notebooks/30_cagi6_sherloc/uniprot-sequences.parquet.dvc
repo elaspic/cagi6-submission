@@ -1,0 +1,4 @@
+outs:
+- md5: 15c4cdf38e78fc2b18f30bd43d097cf7
+  size: 2352775
+  path: uniprot-sequences.parquet

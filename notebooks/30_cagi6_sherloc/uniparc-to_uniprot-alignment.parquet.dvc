@@ -1,0 +1,4 @@
+outs:
+- md5: 3bb0ff331da8e023a9680c821c2916ae
+  size: 2206458
+  path: uniparc-to_uniprot-alignment.parquet

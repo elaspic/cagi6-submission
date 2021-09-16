@@ -1,0 +1,4 @@
+outs:
+- md5: 37302718a4bb4996066a91a8df9734f4
+  size: 720
+  path: SYNAPSE_METADATA_MANIFEST.tsv

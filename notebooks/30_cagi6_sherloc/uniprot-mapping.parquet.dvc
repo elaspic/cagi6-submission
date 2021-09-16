@@ -1,0 +1,4 @@
+outs:
+- md5: 90ff028751be7964eb55221edf5df574
+  size: 46098
+  path: uniprot-mapping.parquet

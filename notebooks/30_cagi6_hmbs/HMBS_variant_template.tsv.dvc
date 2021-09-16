@@ -1,0 +1,4 @@
+outs:
+- md5: 6116f8fe77256a6f7db41491d40c6ec1
+  size: 128293
+  path: HMBS_variant_template.tsv
