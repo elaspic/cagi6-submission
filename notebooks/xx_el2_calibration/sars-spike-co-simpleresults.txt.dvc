@@ -1,4 +1,4 @@
 outs:
 - md5: e7617160d45aff5a3964380fd5d2dc62
   size: 482684
-  path: simpleresults.txt
+  path: sars-spike-co-simpleresults.txt
