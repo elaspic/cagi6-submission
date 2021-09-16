@@ -1,0 +1,5 @@
+outs:
+- md5: b3f1e00b45abae134f9c13efb8a643ca.dir
+  size: 5406
+  nfiles: 6
+  path: submission

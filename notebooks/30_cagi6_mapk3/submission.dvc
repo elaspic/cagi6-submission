@@ -2,4 +2,4 @@ outs:
 - md5: 6e15f2f832acf9d67163d8b4ba06f286.dir
   size: 6825
   nfiles: 6
-  path: results
+  path: submission
