@@ -4,3 +4,6 @@
     type = "hardlink,symlink"
 ['remote "myremote"']
     url = /home/strokach/data/dvcstore
+['remote "niagara"']
+    url = /home/p/pmkim/strokach/data/dvcstore
+
