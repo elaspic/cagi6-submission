@@ -11,7 +11,7 @@
 #SBATCH --export=ALL
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-user=alexey.strokach@kimlab.org
-#SBATCH --output=/scratch/strokach/logs/elaspic2-cagi6-%N-%j.log
+#SBATCH --output=logs/elaspic2-cagi6-%N-%j.log
 
 set -ev
 
@@ -28,8 +28,8 @@ echo ${NOTEBOOK_PATH} ${NOTEBOOK_STEM} ${NOTEBOOK_DIR} ${OUTPUT_TAG}
 
 
 singularity exec --bind /scratch --bind /project --nv \
-  --env PYTHONPATH="$(realpath ~/project-rrg/workspace/elaspic2/src)" \
-  ~/project-rrg/singularity-images/default-v46d.sif \
+  --env PYTHONPATH="$(realpath ~/workspace/elaspic2/src)" \
+  ~/singularity/default-v46d.sif \
   bash -c "
 source /opt/conda/etc/profile.d/conda.sh;
 conda activate base;

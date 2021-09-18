@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=4
+#SBATCH --ntasks-per-node=1
 # #SBATCH --ntasks-per-node=32
 # #SBATCH --ntasks-per-node=44
-#SBATCH --mem=15G
+#SBATCH --mem=4G
 # #SBATCH --mem=110G
 # #SBATCH --mem=180G
 #SBATCH --account=rrg-pmkim
