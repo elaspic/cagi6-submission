@@ -7,6 +7,7 @@ _.DS_Store
 .ipynb_checkpoints
 
 notebooks/*-gra*.ipynb
+notebooks/*-nia*.ipynb
 
 notebooks/*/*
 !notebooks/*/*.dvc
