@@ -1,14 +1,16 @@
 #!/bin/bash
 #SBATCH --time=24:00:00
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=44
-#SBATCH --mem=180G
+#SBATCH --ntasks-per-node=32
+# #SBATCH --ntasks-per-node=44
+#SBATCH --mem=110G
+# #SBATCH --mem=180G
 #SBATCH --account=rrg-pmkim
 #SBATCH --job-name=elaspic2-cagi6
 #SBATCH --export=ALL
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-user=alexey.strokach@kimlab.org
-#SBATCH --output=/scratch/strokach/elaspic2-cagi6-%N-%j.log
+#SBATCH --output=/scratch/strokach/logs/elaspic2-cagi6-%N-%j.log
 
 set -ev
 
@@ -26,7 +28,7 @@ echo ${NOTEBOOK_PATH} ${NOTEBOOK_STEM} ${NOTEBOOK_DIR} ${OUTPUT_TAG}
 
 singularity exec --bind /scratch --bind /project --nv \
   --env PYTHONPATH="$(realpath ~/project-rrg/workspace/elaspic2/src)" \
-  ~/project-rrg/singularity/rb-613047a0a267b3f6a3832bb3_latest.sif \
+  ~/project-rrg/singularity-images/default-v46d.sif \
   bash -c "
 source /opt/conda/etc/profile.d/conda.sh;
 conda activate base;
