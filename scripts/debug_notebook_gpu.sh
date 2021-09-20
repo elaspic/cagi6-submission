@@ -19,7 +19,17 @@ unset XDG_RUNTIME_DIR
 
 module load singularity
 
-singularity exec --bind /scratch --bind /project --nv \
+host=$(hostname)
+if [[ $host =~ "blg" ]] ; then
+  SINGULARITY_BINDS="--bind /lustre01 --bind /lustre02 --bind /lustre03 --bind /lustre04"
+elif [[ $host =~ "nia" ]] ; then
+  SINGULARITY_BINDS="--bind /scratch --bind /project --bind /gpfs"
+else
+  SINGULARITY_BINDS="--bind /scratch --bind /project"
+fi
+echo $host $SINGULARITY_BINDS
+
+singularity exec ${SINGULARITY_BINDS} --nv \
   --env PYTHONPATH="$(realpath ~/workspace/elaspic2/src)" \
   ~/singularity/default-v46d.sif \
   bash -c "
