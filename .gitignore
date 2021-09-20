@@ -6,8 +6,7 @@ _.DS_Store
 .env
 .ipynb_checkpoints
 
-notebooks/*-gra*.ipynb
-notebooks/*-nia*.ipynb
+notebooks/*-*.ipynb
 
 notebooks/*/*
 !notebooks/*/*.dvc
