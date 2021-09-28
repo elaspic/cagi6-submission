@@ -1,0 +1,4 @@
+outs:
+- md5: 570816d125806c79c621475f4bb84dc7
+  size: 313555
+  path: alphafold-results.parquet
