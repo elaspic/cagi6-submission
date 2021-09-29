@@ -1,0 +1,4 @@
+outs:
+- md5: 9fc8aeefae5af32322cac616dfd60e5e
+  size: 14728284
+  path: proteinsolver-results.parquet
