@@ -2,6 +2,7 @@ __MACOSX
 _.DS_Store
 .~lock*
 ._*
+__pycache__
 
 .env
 .ipynb_checkpoints
