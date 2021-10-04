@@ -1,15 +1,15 @@
 | code        | features                                   | machine           |
 | ----------- | ------------------------------------------ | ----------------- |
 | `7f9826be`† | `base` + `AFwt`                            | Graham (44 cores) |
-| `900500fe`† | `base` + `AFwt` + `AFmut`                  | Beluga (30 cores) |
 | `fd28687b`  | `base` + `AFwt`                            | Beluga (30 cores) |
+| `900500fe`† | `base` + `AFwt` + `AFmut`                  | Beluga (30 cores) |
 | `be3bdad5`  | `base` + `AFwt` + `AFmut`                  | Graham (44 cores) |
 | `6999e5aa`  | `base` + `EL2` + `AFwt`                    | Graham (44 cores) |
 | `4df6fd79`  | `base` + `EL2` + `AFwt` + `AFmut` [no opt] | Graham (44 cores) |
+| `0d59c727`  | `base`                                     | Beluga (30 cores) |
+| `eabf01fe`  | `base - rosetta`                           | Graham (44 cores) |
 
- | `0d59c727` | `base` | Beluga (30 cores) |
-| `eabf01fe` | `base - rosetta` | Graham (44 cores) |
-| `a7b1c747` | `base - rosetta - af` | Graham (44 cores) |
+| `a7b1c747` | `base - rosetta - ps` | Graham (44 cores) |
 
 # Submission for CAGI6—CAM challenge
 
