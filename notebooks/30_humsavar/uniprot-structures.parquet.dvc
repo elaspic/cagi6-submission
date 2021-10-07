@@ -1,0 +1,4 @@
+outs:
+- md5: 3a0d8b647b826204d2718bcf5bc9d685
+  size: 1877357463
+  path: uniprot-structures.parquet
