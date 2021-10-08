@@ -1,0 +1,4 @@
+outs:
+- md5: d834fc49801cf501c3aaf4adc1927f0d
+  size: 15018519108
+  path: uniprot-alignments.parquet
