@@ -12,6 +12,9 @@
 | `a7b1c747` | `base - rosetta - ps` | Graham (44 cores) |
 
 
+- `678e7e39` | `base` + `AFwt` (no weights)
+- `c8fef37f` | `base` + `AFmut` (no weights)
+
 
 - `3d9abe70` | `base` + `AFwt` (binary_logloss + is_unbalance)
 - `38af39b4` `13edb1b7` [`base` + `AFwt` + `AFmut` (binary_logloss + is_unbalance) ]
