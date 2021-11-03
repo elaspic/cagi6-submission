@@ -11,15 +11,34 @@
 
 | `a7b1c747` | `base - rosetta - ps` | Graham (44 cores) |
 
+#### Compare feature importances of structural methods
+
+| code       | features                                                           | machine           |
+| ---------- | ------------------------------------------------------------------ | ----------------- |
+| `6d02ae59` | `proteinsolver-protbert-rosetta_ddg-alphafold_wt`                  | Graham (44 cores) |
+| `b2d0dfb9` | `proteinsolver-protbert-rosetta_ddg-alphafold_wt-alphafold_change` | Graham (44 cores) |
+| `1855e7a4` | `proteinsolver`                                                    | Graham (44 cores) |
+| `a6b35daa` | `protbert`                                                         | Graham (44 cores) |
+| `2cf623ec` | `rosetta_ddg`                                                      | Graham (44 cores) |
+| `bfda8ca8` | `alphafold_wt`                                                     | Graham (44 cores) |
+| `b93fddbb` | `alphafold_change`                                                 | Graham (44 cores) |
+
+#### With humsavar
+
+- `f6be01c3`
+
+
+#### Do not weigh probable and likely mutations differently
 
 - `678e7e39` | `base` + `AFwt` (no weights)
-- `c8fef37f` | `base` + `AFmut` (no weights)
+- `c8fef37f` | `base` + `AFwt+mut` (no weights)
 
+#### Set `metric="binary_logloss"` and `is_unbalance=True`
+
+Did not work out well (weird feature elimination curves and lower accuracy in the end)
 
 - `3d9abe70` | `base` + `AFwt` (binary_logloss + is_unbalance)
 - `38af39b4` `13edb1b7` [`base` + `AFwt` + `AFmut` (binary_logloss + is_unbalance) ]
-
-
 
 # Submission for CAGI6—CAM challenge
 
