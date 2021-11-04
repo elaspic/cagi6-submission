@@ -35,7 +35,7 @@ echo $host $SINGULARITY_BINDS
 
 singularity exec ${SINGULARITY_BINDS} \
   --env PYTHONPATH="$(realpath ~/workspace/elaspic2/src)" \
-  ~/singularity/default-v48a.sif \
+  ~/singularity/default-v48b.sif \
   bash -c "
 source /opt/conda/etc/profile.d/conda.sh;
 conda activate base;
