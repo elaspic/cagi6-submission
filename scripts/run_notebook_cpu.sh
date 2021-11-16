@@ -9,7 +9,6 @@
 #SBATCH --job-name=elaspic2-cagi6
 #SBATCH --export=ALL
 #SBATCH --mail-type=BEGIN
-#SBATCH --mail-user=alexey.strokach@kimlab.org
 #SBATCH --output=logs/elaspic2-cagi6-%N-%j.log
 #SBATCH --error=logs/elaspic2-cagi6-%N-%j.err
 
