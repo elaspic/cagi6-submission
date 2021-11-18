@@ -1,3 +1,46 @@
+# CAGI6 submission
+
+- [CAGI6 submission](#cagi6-submission)
+  - [HMBS](#hmbs)
+  - [](#)
+  - [](#1)
+  - [Sherloc clinical classification](#sherloc-clinical-classification)
+    - [Compare feature importances of structural methods](#compare-feature-importances-of-structural-methods)
+    - [With humsavar](#with-humsavar)
+    - [Do not weigh probable and likely mutations differently](#do-not-weigh-probable-and-likely-mutations-differently)
+    - [Set `metric="binary_logloss"` and `is_unbalance=True`](#set-metric%22binarylogloss%22-and-isunbalancetrue)
+- [Submission for CAGI6—CAM challenge](#submission-for-cagi6cam-challenge)
+  - [Overview](#overview)
+  - [References](#references)
+
+## Submissions
+
+### MTHFR
+
+**Related notebooks:**
+
+| Notebook | Description |
+| -------- | ----------- |
+|          |             |
+
+### CAM
+
+### MAPK1
+
+### MAPK3
+
+### HMBS
+
+### Sherloc clinical classification
+
+CAGI6-Sherloc-clinical-classification strokach10/15/2021
+CAGI6-MAPK3 strokach10/01/2021
+CAGI6-MAPK1 strokach10/01/2021
+CAGI6-CAM strokach10/01/2021
+CAGI6-HMBS strokach10/01/2021
+CAGI6-MTHFR ostrokach09/30/2021
+az_dream_2015
+
 | code        | features                                   | machine           |
 | ----------- | ------------------------------------------ | ----------------- |
 | `7f9826be`† | `base` + `AFwt`                            | Graham (44 cores) |
@@ -26,7 +69,6 @@
 #### With humsavar
 
 - `f6be01c3`
-
 
 #### Do not weigh probable and likely mutations differently
 
