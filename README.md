@@ -92,7 +92,7 @@ For the Sherloc clinical classification challenge, we trained new models using b
 </details>
 
 <details open>
-<summary>Relevant notebooks:</summary>
+<summary><b>Relevant notebooks</b></summary>
 
 | Name                                         | Description                                                                  |
 | -------------------------------------------- | ---------------------------------------------------------------------------- |
