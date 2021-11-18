@@ -17,7 +17,7 @@
 
 ### MTHFR
 
-**Related notebooks:**
+**Relevant notebooks:**
 
 | Notebook | Description |
 | -------- | ----------- |
@@ -25,13 +25,65 @@
 
 ### CAM
 
+| Notebook                          | Description |
+| --------------------------------- | ----------- |
+| [`40_cagi6_cam_submission.ipynb`] |             |
+
 ### MAPK1
+
+| Notebook | Description |
+| -------- | ----------- |
+|          |             |
 
 ### MAPK3
 
+| Notebook | Description |
+| -------- | ----------- |
+|          |             |
+
 ### HMBS
 
+| Notebook                           | Description |
+| ---------------------------------- | ----------- |
+| [`30_cagi6_hmbs.ipynb`]            |             |
+| [`35_cagi6_hmbs_alphafold.ipynb`]  |             |
+| [`35_cagi6_hmbs_el2.ipynb`]        |             |
+| [`35_cagi6_hmbs_rosetta.ipynb`]    |             |
+| [`35_cagi6_sherloc_el2.ipynb`]     |             |
+| [`40_cagi6_hmbs_submission.ipynb`] |             |
+
+[`30_cagi6_hmbs.ipynb`]: notebooks/30_cagi6_hmbs.ipynb
+[`40_cagi6_hmbs_submission.ipynb`]: notebooks/40_cagi6_hmbs_submission.ipynb
+
 ### Sherloc clinical classification
+
+| Notebook                                   | Description                                                                  |
+| ------------------------------------------ | ---------------------------------------------------------------------------- |
+| [`30_cagi6_sherloc.ipynb`]                 | Load the CAGI6 Sherloc dataset.                                              |
+| [`30_humsavar.ipynb`]                      | Load the humsavar dataset.                                                   |
+| [`31_run_alphafold_wt.ipynb`]              | Generate AlphaFold features.                                                 |
+| [`31_run_msa_analysis.ipynb`]              | Generate basic MSA features.                                                 |
+| [`31_run_protbert.ipynb`]                  | Generate ProtBert features.                                                  |
+| [`31_run_proteinsolver.ipynb`]             | Generate ProteinSolver features.                                             |
+| [`31_run_rosetta_ddg.ipynb`]               | Generate Rosetta features.                                                   |
+| [`37_cagi6_sherloc_combine_results.ipynb`] | Combine features generated using all methods for the Sherloc dataset.        |
+| [`37_humsavar_combine_results.ipynb`]      | Combine features generated using all methods for the humsavar dataset.       |
+| [`38_cagi6_sherloc_train_model.ipynb`]     | Train a machine learning model using Sherloc + humsavar data.                |
+| [`39_cagi6_sherloc_finetune_model.ipynb`]  | Finetune the trained machine learning model and perform feature elimination. |
+| [`40_cagi6_sherloc_submission.ipynb`]      | Make predictions for the test dataset.                                       |
+
+[`30_cagi6_sherloc.ipynb`]: notebooks/30_cagi6_sherloc.ipynb
+[`30_humsavar.ipynb`]: notebooks/30_humsavar.ipynb
+[`31_run_alphafold_wt.ipynb`]: notebooks/31_run_alphafold_wt.ipynb
+[`31_run_msa_analysis.ipynb`]: notebooks/31_run_msa_analysis.ipynb
+[`31_run_protbert.ipynb`]: notebooks/31_run_protbert.ipynb
+[`31_run_proteinsolver.ipynb`]: notebooks/31_run_proteinsolver.ipynb
+[`31_run_rosetta_ddg.ipynb`]: notebooks/31_run_rosetta_ddg.ipynb
+[`37_cagi6_sherloc_combine_results.ipynb`]: notebooks/37_cagi6_sherloc_combine_results.ipynb
+[`37_humsavar_combine_results.ipynb`]: notebooks/37_humsavar_combine_results.ipynb
+[`38_cagi6_sherloc_train_model.ipynb`]: notebooks/38_cagi6_sherloc_train_model.ipynb
+[`39_cagi6_sherloc_finetune_model.ipynb`]: notebooks/39_cagi6_sherloc_finetune_model.ipynb
+[`40_cagi6_sherloc_submission.ipynb`]: notebooks/40_cagi6_sherloc_submission.ipynb
 
 CAGI6-Sherloc-clinical-classification strokach10/15/2021
 CAGI6-MAPK3 strokach10/01/2021
