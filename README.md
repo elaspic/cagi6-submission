@@ -1,10 +1,7 @@
 # CAGI6 community assessment
 
 - [ELASPIC3 overview](#elaspic3-overview)
-  - [Compare feature importances of structural methods](#compare-feature-importances-of-structural-methods)
-    - [With humsavar](#with-humsavar)
-    - [Do not weigh probable and likely mutations differently](#do-not-weigh-probable-and-likely-mutations-differently)
-    - [Set `metric="binary_logloss"` and `is_unbalance=True`](#set-metricbinary_logloss-and-is_unbalancetrue)
+  - [Compare the relative importance of different features](#compare-the-relative-importance-of-different-features)
 - [Individual challenges](#individual-challenges)
   - [CAM](#cam)
   - [MAPK1](#mapk1)
@@ -32,41 +29,24 @@ We trained multiple models using different sets of features.
 | `6999e5aa`  | `base` + `EL2` + `AFwt`                    | Graham (44 cores) |
 | `4df6fd79`  | `base` + `EL2` + `AFwt` + `AFmut` [no opt] | Graham (44 cores) |
 | `0d59c727`  | `base`                                     | Beluga (30 cores) |
-| `eabf01fe`  | `base - rosetta`                           | Graham (44 cores) |
-
-| code       | features              | machine           |
-| ---------- | --------------------- | ----------------- |
-| `a7b1c747` | `base - rosetta - ps` | Graham (44 cores) |
+| `eabf01fe`  | `base` - `rosetta`                         | Graham (44 cores) |
+| `eabf01fe`  | `base` - `rosetta`                         | Graham (44 cores) |
+| `a7b1c747`  | `base` - `rosetta` - `ps`                  | Graham (44 cores) |
 
 </details>
 
-### Compare feature importances of structural methods
+### Compare the relative importance of different features
 
-| code       | features                                                           | machine           |
-| ---------- | ------------------------------------------------------------------ | ----------------- |
-| `6d02ae59` | `proteinsolver-protbert-rosetta_ddg-alphafold_wt`                  | Graham (44 cores) |
-| `b2d0dfb9` | `proteinsolver-protbert-rosetta_ddg-alphafold_wt-alphafold_change` | Graham (44 cores) |
-| `1855e7a4` | `proteinsolver`                                                    | Graham (44 cores) |
-| `a6b35daa` | `protbert`                                                         | Graham (44 cores) |
-| `2cf623ec` | `rosetta_ddg`                                                      | Graham (44 cores) |
-| `bfda8ca8` | `alphafold_wt`                                                     | Graham (44 cores) |
-| `b93fddbb` | `alphafold_change`                                                 | Graham (44 cores) |
-
-#### With humsavar
-
-- `f6be01c3`
-
-#### Do not weigh probable and likely mutations differently
-
-- `678e7e39` | `base` + `AFwt` (no weights)
-- `c8fef37f` | `base` + `AFwt+mut` (no weights)
-
-#### Set `metric="binary_logloss"` and `is_unbalance=True`
-
-Did not work out well (weird feature elimination curves and lower accuracy in the end)
-
-- `3d9abe70` | `base` + `AFwt` (binary_logloss + is_unbalance)
-- `38af39b4` `13edb1b7` [`base` + `AFwt` + `AFmut` (binary_logloss + is_unbalance) ]
+| code       | features                                                                                 | machine           |
+| ---------- | ---------------------------------------------------------------------------------------- | ----------------- |
+| `6d02ae59` | `base` + `proteinsolver` + `protbert` + `rosetta_ddg` + `alphafold_wt`                   | Graham (44 cores) |
+| `b2d0dfb9` | `base` + `proteinsolver` + `protbert` + `rosetta_ddg` + `alphafold_wt` + `alphafold_mut` | Graham (44 cores) |
+| `bfda8ca8` | `base` + `alphafold_wt`                                                                  | Graham (44 cores) |
+| `b93fddbb` | `base` + `alphafold_mut`                                                                 | Graham (44 cores) |
+| `a6b35daa` | `base` + `protbert`                                                                      | Graham (44 cores) |
+| `1855e7a4` | `base` + `proteinsolver`                                                                 | Graham (44 cores) |
+| `2cf623ec` | `base` + `rosetta_ddg`                                                                   | Graham (44 cores) |
+|            | `base` (amino acid types and MSA mutual information and relative entropy)                | Graham (44 cores) |
 
 ## Individual challenges
 
