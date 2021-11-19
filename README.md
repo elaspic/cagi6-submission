@@ -196,7 +196,7 @@ Our submission: <https://www.synapse.org/#!Synapse:syn25891794/files/>.
 
 ### HMBS
 
-Overview: <http://genomeinterpretation.org/cagi6-hmbs.html>.
+**Overview:** <http://genomeinterpretation.org/cagi6-hmbs.html>.
 
 Our submission: <https://www.synapse.org/#!Synapse:syn26159218/files/>.
 
