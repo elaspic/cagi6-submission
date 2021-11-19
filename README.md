@@ -70,9 +70,9 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### CAM
 
-**Overview:** <http://genomeinterpretation.org/cagi6-cam.html>.
+Overview: <http://genomeinterpretation.org/cagi6-cam.html>.
 
-**Our submission:** <https://www.synapse.org/#!Synapse:syn26145788/files/>.
+Our submission: <https://www.synapse.org/#!Synapse:syn26145788/files/>.
 
 <details>
 <summary><b>Relevant notebooks</b></summary>
@@ -101,9 +101,9 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### MAPK1
 
-**Overview:** <http://genomeinterpretation.org/cagi6-mapk1.html>.
+Overview: <http://genomeinterpretation.org/cagi6-mapk1.html>.
 
-**Our submission:** <https://www.synapse.org/#!Synapse:syn26145783/files/>.
+Our submission: <https://www.synapse.org/#!Synapse:syn26145783/files/>.
 
 <details>
 <summary><b>Relevant notebooks</b></summary>
@@ -132,9 +132,9 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### MAPK3
 
-**Overview:** <http://genomeinterpretation.org/cagi6-mapk3.html>.
+Overview: <http://genomeinterpretation.org/cagi6-mapk3.html>.
 
-**Our submission:** <https://www.synapse.org/#!Synapse:syn26145778/files/>.
+Our submission: <https://www.synapse.org/#!Synapse:syn26145778/files/>.
 
 <details>
 <summary><b>Relevant notebooks</b></summary>
@@ -163,9 +163,9 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### MTHFR
 
-**Overview:** <http://genomeinterpretation.org/cagi6-mthfr.html>.
+Overview: <http://genomeinterpretation.org/cagi6-mthfr.html>.
 
-**Our submission:** <https://www.synapse.org/#!Synapse:syn25891794/files/>.
+Our submission: <https://www.synapse.org/#!Synapse:syn25891794/files/>.
 
 <details>
 <summary><b>Relevant notebooks</b></summary>
@@ -196,9 +196,9 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### HMBS
 
-**Overview:** <http://genomeinterpretation.org/cagi6-hmbs.html>.
+Overview: <http://genomeinterpretation.org/cagi6-hmbs.html>.
 
-**Our submission:** <https://www.synapse.org/#!Synapse:syn26159218/files/>.
+Our submission: <https://www.synapse.org/#!Synapse:syn26159218/files/>.
 
 <details>
 <summary><b>Relevant notebooks</b></summary>
@@ -235,11 +235,11 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### Sherloc
 
-**Overview:** <http://genomeinterpretation.org/cagi6-invitae.html>.
-
-**Our submission:** <https://www.synapse.org/#!Synapse:syn26272013/files/>.
-
 For the Sherloc clinical classification challenge, we trained new models using both the provided training data and the mutations listed in the UniProt [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file.
+
+Overview: <http://genomeinterpretation.org/cagi6-invitae.html>.
+
+Our submission: <https://www.synapse.org/#!Synapse:syn26272013/files/>.
 
 <details>
 <summary><b>Relevant notebooks</b></summary>
