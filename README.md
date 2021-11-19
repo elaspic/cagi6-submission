@@ -11,7 +11,7 @@
   - [MAPK3](#mapk3)
   - [MTHFR](#mthfr)
   - [HMBS](#hmbs)
-  - [Sherloc clinical classification](#sherloc-clinical-classification)
+  - [Sherloc](#sherloc)
 - [References](#references)
 
 ## ELASPIC3 — ELASPIC2 but with AlphaFold 😛
@@ -156,8 +156,10 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 | Name                                  | Description                                                      |
 | ------------------------------------- | ---------------------------------------------------------------- |
-| 🗒 [`40_cagi6_mthfr_submission.ipynb`] | Load the MTHFR dataset, generate features, and make predictions. |
+| 🗒 [`35_cagi_mthfr_predictions.ipynb`] | Load the MTHFR dataset, generate features, and make predictions. |
+| 🗒 [`40_cagi6_mthfr_submission.ipynb`] | Prepare submission for the CAGI6 challenge.                      |
 
+[`35_cagi_mthfr_predictions.ipynb`]: notebooks/35_cagi_mthfr_predictions.ipynb
 [`40_cagi6_mthfr_submission.ipynb`]: notebooks/40_cagi6_mthfr_submission.ipynb
 
 </details>
@@ -181,14 +183,13 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 <details open>
 <summary><b>Relevant notebooks</b></summary>
 
-| Name                                 | Description |
-| ------------------------------------ | ----------- |
-| 🗒 [`30_cagi6_hmbs.ipynb`]            |             |
-| 🗒 [`35_cagi6_hmbs_alphafold.ipynb`]  |             |
-| 🗒 [`35_cagi6_hmbs_el2.ipynb`]        |             |
-| 🗒 [`35_cagi6_hmbs_rosetta.ipynb`]    |             |
-| 🗒 [`35_cagi6_sherloc_el2.ipynb`]     |             |
-| 🗒 [`40_cagi6_hmbs_submission.ipynb`] |             |
+| Name                                 | Description                                 |
+| ------------------------------------ | ------------------------------------------- |
+| 🗒 [`30_cagi6_hmbs.ipynb`]            | Load the HMBS dataset.                      |
+| 🗒 [`35_cagi6_hmbs_alphafold.ipynb`]  | Generate AlphaFold2 features.               |
+| 🗒 [`35_cagi6_hmbs_el2.ipynb`]        | Generate ELASPIC2 scores and features.      |
+| 🗒 [`35_cagi6_hmbs_rosetta.ipynb`]    | Generate Rosetta scores and features.       |
+| 🗒 [`40_cagi6_hmbs_submission.ipynb`] | Prepare submission for the CAGI6 challenge. |
 
 [`30_cagi6_hmbs.ipynb`]: notebooks/30_cagi6_hmbs.ipynb
 [`35_cagi6_hmbs_alphafold.ipynb`]: notebooks/35_cagi6_hmbs_alphafold.ipynb
@@ -212,28 +213,28 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 </details>
 
-### Sherloc clinical classification
+### Sherloc
 
 For the Sherloc clinical classification challenge, we trained new models using both the provided training data and the mutations listed in the UniProt [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file.
 
 <details open>
 <summary><b>Relevant notebooks</b></summary>
 
-| Name                                         | Description                                                                  |
-| -------------------------------------------- | ---------------------------------------------------------------------------- |
-| 🗒 [`30_cagi6_sherloc.ipynb`]                 | Load the Sherloc dataset.                                                    |
-| 🗒 [`30_humsavar.ipynb`]                      | Load the humsavar dataset.                                                   |
-| 🗒 [`31_run_alphafold_wt.ipynb`]              | Generate AlphaFold embeddings.                                               |
-| 🗒 [`31_run_msa_analysis.ipynb`]              | Generate basic MSA features.                                                 |
-| 🗒 [`31_run_protbert.ipynb`]                  | Generate ProtBert features.                                                  |
-| 🗒 [`31_run_proteinsolver.ipynb`]             | Generate ProteinSolver features.                                             |
-| 🗒 [`31_run_rosetta_ddg.ipynb`]               | Generate Rosetta features.                                                   |
-| 🗒 [`32_process_alphafold.ipynb`]             | Process AlphaFold embeddings into features.                                  |
-| 🗒 [`37_cagi6_sherloc_combine_results.ipynb`] | Combine features generated using all methods for the Sherloc dataset.        |
-| 🗒 [`37_humsavar_combine_results.ipynb`]      | Combine features generated using all methods for the humsavar dataset.       |
-| 🗒 [`38_cagi6_sherloc_train_model.ipynb`]     | Train a machine learning model using Sherloc + humsavar data.                |
-| 🗒 [`39_cagi6_sherloc_finetune_model.ipynb`]  | Finetune the trained machine learning model and perform feature elimination. |
-| 🗒 [`40_cagi6_sherloc_submission.ipynb`]      | Make predictions for the test dataset.                                       |
+| Name                                         | Description                                                                           |
+| -------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 🗒 [`30_cagi6_sherloc.ipynb`]                 | Load the Sherloc dataset.                                                             |
+| 🗒 [`30_humsavar.ipynb`]                      | Load the humsavar dataset.                                                            |
+| 🗒 [`31_run_alphafold_wt.ipynb`]              | Generate AlphaFold embeddings.                                                        |
+| 🗒 [`31_run_msa_analysis.ipynb`]              | Generate basic MSA features.                                                          |
+| 🗒 [`31_run_protbert.ipynb`]                  | Generate ProtBert features.                                                           |
+| 🗒 [`31_run_proteinsolver.ipynb`]             | Generate ProteinSolver features.                                                      |
+| 🗒 [`31_run_rosetta_ddg.ipynb`]               | Generate Rosetta features.                                                            |
+| 🗒 [`32_process_alphafold.ipynb`]             | Process AlphaFold embeddings into features.                                           |
+| 🗒 [`37_cagi6_sherloc_combine_results.ipynb`] | Combine features generated using all methods for the Sherloc dataset.                 |
+| 🗒 [`37_humsavar_combine_results.ipynb`]      | Combine features generated using all methods for the humsavar dataset.                |
+| 🗒 [`38_cagi6_sherloc_train_model.ipynb`]     | Train a machine learning model using Sherloc + humsavar data.                         |
+| 🗒 [`39_cagi6_sherloc_finetune_model.ipynb`]  | Finetune the trained machine learning model and perform feature elimination.          |
+| 🗒 [`40_cagi6_sherloc_submission.ipynb`]      | Make predictions for the test dataset and prepare submission for the CAGI6 challenge. |
 
 [`30_cagi6_sherloc.ipynb`]: notebooks/30_cagi6_sherloc.ipynb
 [`30_humsavar.ipynb`]: notebooks/30_humsavar.ipynb
