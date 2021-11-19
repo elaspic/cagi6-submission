@@ -18,7 +18,7 @@
 
 We trained multiple models using different sets of features.
 
-<details open>
+<details>
 <summary><b>Description of models that were trained</b></summary>
 
 | code        | features                                   | machine           |
@@ -70,9 +70,11 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### CAM
 
-<http://genomeinterpretation.org/cagi6-cam.html>
+Overview: <http://genomeinterpretation.org/cagi6-cam.html>.
 
-<details open>
+Our submission: <https://www.synapse.org/#!Synapse:syn26145788/files/>.
+
+<details>
 <summary><b>Relevant notebooks</b></summary>
 
 | Name                                | Description                                                    |
@@ -83,10 +85,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 </details>
 
-<details open>
-<summary><b>Submissions</b></summary>
-
-<https://www.synapse.org/#!Synapse:syn26145788/files/>
+<details>
+<summary><b>Submission files</b></summary>
 
 | Filename                     | Description                                                                                                 |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -101,9 +101,11 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### MAPK1
 
-<http://genomeinterpretation.org/cagi6-mapk1.html>
+Overview: <http://genomeinterpretation.org/cagi6-mapk1.html>.
 
-<details open>
+Our submission: <https://www.synapse.org/#!Synapse:syn26145783/files/>.
+
+<details>
 <summary><b>Relevant notebooks</b></summary>
 
 | Name                                  | Description                                                      |
@@ -114,10 +116,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 </details>
 
-<details open>
-<summary><b>Submissions</b></summary>
-
-<https://www.synapse.org/#!Synapse:syn26145783/files/>
+<details>
+<summary><b>Submission files</b></summary>
 
 | Filename                     | Description                                                                                                 |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -132,9 +132,11 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### MAPK3
 
-<http://genomeinterpretation.org/cagi6-mapk3.html>
+Overview: <http://genomeinterpretation.org/cagi6-mapk3.html>.
 
-<details open>
+Our submission: <https://www.synapse.org/#!Synapse:syn26145778/files/>.
+
+<details>
 <summary><b>Relevant notebooks</b></summary>
 
 | Name                                  | Description                                                      |
@@ -145,10 +147,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 </details>
 
-<details open>
-<summary><b>Submissions</b></summary>
-
-<https://www.synapse.org/#!Synapse:syn26145778/files/>
+<details>
+<summary><b>Submission files</b></summary>
 
 | Filename                     | Description                                                                                                 |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -163,9 +163,11 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 ### MTHFR
 
-<http://genomeinterpretation.org/cagi6-mthfr.html>
+Overview: <http://genomeinterpretation.org/cagi6-mthfr.html>.
 
-<details open>
+Our submission: <https://www.synapse.org/#!Synapse:syn25891794/files/>.
+
+<details>
 <summary><b>Relevant notebooks</b></summary>
 
 | Name                                  | Description                                                      |
@@ -178,10 +180,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 </details>
 
-<details open>
-<summary><b>Submissions</b></summary>
-
-<https://www.synapse.org/#!Synapse:syn25891794/files/>
+<details>
+<summary><b>Submission files</b></summary>
 
 | Filenames                                                                                                                                        | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
@@ -200,7 +200,7 @@ Overview: <http://genomeinterpretation.org/cagi6-hmbs.html>.
 
 Our submission: <https://www.synapse.org/#!Synapse:syn26159218/files/>.
 
-<details open>
+<details>
 <summary><b>Relevant notebooks</b></summary>
 
 | Name                                 | Description                                 |
@@ -220,8 +220,8 @@ Our submission: <https://www.synapse.org/#!Synapse:syn26159218/files/>.
 
 </details>
 
-<details open>
-<summary><b>Submissions</b></summary>
+<details>
+<summary><b>Submission files</b></summary>
 
 | Filename                     | Description                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -235,11 +235,13 @@ Our submission: <https://www.synapse.org/#!Synapse:syn26159218/files/>.
 
 ### Sherloc
 
-<http://genomeinterpretation.org/cagi6-invitae.html>
+Overview: <http://genomeinterpretation.org/cagi6-invitae.html>.
+
+Our submission: <https://www.synapse.org/#!Synapse:syn26272013/files/>.
 
 For the Sherloc clinical classification challenge, we trained new models using both the provided training data and the mutations listed in the UniProt [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file.
 
-<details open>
+<details>
 <summary><b>Relevant notebooks</b></summary>
 
 | Name                                         | Description                                                                           |
@@ -274,11 +276,8 @@ For the Sherloc clinical classification challenge, we trained new models using b
 
 </details>
 
-<details open>
-<summary><b>Submissions</b></summary>
-
-<https://www.synapse.org/#!Synapse:syn26272013/files/>
-
+<details>
+<summary><b>Submission files</b></summary>
 
 </details>
 
