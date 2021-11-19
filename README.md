@@ -16,7 +16,7 @@
 
 ## ELASPIC3 overview
 
-> ELASPIC3 ≔ ELASPIC2 but with AlphaFold 😛
+> ELASPIC3 ≔ ELASPIC2 + AlphaFold 😛
 
 We trained multiple models using different sets of features.
 
