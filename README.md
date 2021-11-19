@@ -1,6 +1,6 @@
 # CAGI6 community assessment
 
-- [ELASPIC3 — ELASPIC2 but with AlphaFold 😛](#elaspic3--elaspic2-but-with-alphafold-)
+- [ELASPIC3 overview](#elaspic3-overview)
   - [Compare feature importances of structural methods](#compare-feature-importances-of-structural-methods)
     - [With humsavar](#with-humsavar)
     - [Do not weigh probable and likely mutations differently](#do-not-weigh-probable-and-likely-mutations-differently)
@@ -14,7 +14,9 @@
   - [Sherloc](#sherloc)
 - [References](#references)
 
-## ELASPIC3 — ELASPIC2 but with AlphaFold 😛
+## ELASPIC3 overview
+
+> ELASPIC3 == ELASPIC2 but with AlphaFold 😛
 
 We trained multiple models using different sets of features.
 
