@@ -1,20 +1,20 @@
-# CAGI6 challenge
+# CAGI6 community assessment
 
-- [New models (ELASPIC3)](#new-models-elaspic3)
+- [ELASPIC3 — ELASPIC2 but with AlphaFold 😛](#elaspic3--elaspic2-but-with-alphafold-)
   - [Compare feature importances of structural methods](#compare-feature-importances-of-structural-methods)
     - [With humsavar](#with-humsavar)
     - [Do not weigh probable and likely mutations differently](#do-not-weigh-probable-and-likely-mutations-differently)
     - [Set `metric="binary_logloss"` and `is_unbalance=True`](#set-metricbinary_logloss-and-is_unbalancetrue)
-- [Submissions](#submissions)
-  - [Sherloc clinical classification](#sherloc-clinical-classification)
-  - [HMBS](#hmbs)
+- [Individual challenges](#individual-challenges)
   - [CAM](#cam)
   - [MAPK1](#mapk1)
   - [MAPK3](#mapk3)
   - [MTHFR](#mthfr)
+  - [HMBS](#hmbs)
+  - [Sherloc clinical classification](#sherloc-clinical-classification)
 - [References](#references)
 
-## New models (ELASPIC3)
+## ELASPIC3 — ELASPIC2 but with AlphaFold 😛
 
 We trained multiple models using different sets of features.
 
@@ -66,7 +66,151 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 - `3d9abe70` | `base` + `AFwt` (binary_logloss + is_unbalance)
 - `38af39b4` `13edb1b7` [`base` + `AFwt` + `AFmut` (binary_logloss + is_unbalance) ]
 
-## Submissions
+## Individual challenges
+
+### CAM
+
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                | Description                                                    |
+| ----------------------------------- | -------------------------------------------------------------- |
+| 🗒 [`40_cagi6_cam_submission.ipynb`] | Load the CAM dataset, generate features, and make predictions. |
+
+[`40_cagi6_cam_submission.ipynb`]: notebooks/40_cagi6_cam_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filename                     | Description                                                                                                 |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                        |
+| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                                   |
+| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                        |
+| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                                |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
+
+</details>
+
+### MAPK1
+
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                  | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| 🗒 [`40_cagi6_mapk1_submission.ipynb`] | Load the MAPk1 dataset, generate features, and make predictions. |
+
+[`40_cagi6_mapk1_submission.ipynb`]: notebooks/40_cagi6_mapk1_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filename                     | Description                                                                                                 |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                        |
+| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                                   |
+| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                        |
+| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                                |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
+
+</details>
+
+### MAPK3
+
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                  | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| 🗒 [`40_cagi6_mapk3_submission.ipynb`] | Load the MAPk3 dataset, generate features, and make predictions. |
+
+[`40_cagi6_mapk3_submission.ipynb`]: notebooks/40_cagi6_mapk3_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filename                     | Description                                                                                                 |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                        |
+| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                                   |
+| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                        |
+| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                                |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
+
+</details>
+
+### MTHFR
+
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                  | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| 🗒 [`40_cagi6_mthfr_submission.ipynb`] | Load the MTHFR dataset, generate features, and make predictions. |
+
+[`40_cagi6_mthfr_submission.ipynb`]: notebooks/40_cagi6_mthfr_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filenames                                                                                                                                        | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| `ostrokach_cataWT_model_1.tsv` <br /> `ostrokach_cataAV_model_1.tsv` <br /> `ostrokach_reguWT_model_1.tsv` <br /> `ostrokach_reguAV_model_1.tsv` | Predictions were made using ELASPIC2 [1] and were adjusted to match the target distribution.      |
+| `ostrokach_cataWT_model_2.tsv` <br /> `ostrokach_cataAV_model_2.tsv` <br /> `ostrokach_reguWT_model_2.tsv` <br /> `ostrokach_reguAV_model_2.tsv` | Predictions were made using ProteinSolver [2] and were adjusted to match the target distribution. |
+| `ostrokach_cataWT_model_3.tsv` <br /> `ostrokach_cataAV_model_3.tsv` <br /> `ostrokach_reguWT_model_3.tsv` <br /> `ostrokach_reguAV_model_3.tsv` | Predictions were made using ProtBert [3] and were adjusted to match the target distribution.      |
+| `ostrokach_cataWT_model_4.tsv` <br /> `ostrokach_cataAV_model_4.tsv` <br /> `ostrokach_reguWT_model_4.tsv` <br /> `ostrokach_reguAV_model_4.tsv` | Predictions were made using ELASPIC2 [1] without any subsequent adjustment.                       |
+| `ostrokach_cataWT_model_5.tsv` <br /> `ostrokach_cataAV_model_5.tsv` <br /> `ostrokach_reguWT_model_5.tsv` <br /> `ostrokach_reguAV_model_5.tsv` | Predictions were made using ProteinSolver [2] without any subsequent adjustment.                  |
+| `ostrokach_cataWT_model_6.tsv` <br /> `ostrokach_cataAV_model_6.tsv` <br /> `ostrokach_reguWT_model_6.tsv` <br /> `ostrokach_reguAV_model_6.tsv` | Predictions were made using ProtBert [3] without any subsequent adjustment.                       |
+
+</details>
+
+### HMBS
+
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                 | Description |
+| ------------------------------------ | ----------- |
+| 🗒 [`30_cagi6_hmbs.ipynb`]            |             |
+| 🗒 [`35_cagi6_hmbs_alphafold.ipynb`]  |             |
+| 🗒 [`35_cagi6_hmbs_el2.ipynb`]        |             |
+| 🗒 [`35_cagi6_hmbs_rosetta.ipynb`]    |             |
+| 🗒 [`35_cagi6_sherloc_el2.ipynb`]     |             |
+| 🗒 [`40_cagi6_hmbs_submission.ipynb`] |             |
+
+[`30_cagi6_hmbs.ipynb`]: notebooks/30_cagi6_hmbs.ipynb
+[`35_cagi6_hmbs_alphafold.ipynb`]: notebooks/35_cagi6_hmbs_alphafold.ipynb
+[`35_cagi6_hmbs_el2.ipynb`]: notebooks/35_cagi6_hmbs_el2.ipynb
+[`35_cagi6_hmbs_rosetta.ipynb`]: notebooks/35_cagi6_hmbs_rosetta.ipynb
+[`35_cagi6_sherloc_el2.ipynb`]: notebooks/35_cagi6_sherloc_el2.ipynb
+[`40_cagi6_hmbs_submission.ipynb`]: notebooks/40_cagi6_hmbs_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filename                     | Description                                                                                     |
+| ---------------------------- | ----------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                            |
+| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                       |
+| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                            |
+| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                    |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein . |
+
+</details>
 
 ### Sherloc clinical classification
 
@@ -109,150 +253,6 @@ For the Sherloc clinical classification challenge, we trained new models using b
 
 <details open>
 <summary><b>Submissions</b></summary>
-
-</details>
-
-### HMBS
-
-<details open>
-<summary><b>Relevant notebooks</b></summary>
-
-| Name                                 | Description |
-| ------------------------------------ | ----------- |
-| 🗒 [`30_cagi6_hmbs.ipynb`]            |             |
-| 🗒 [`35_cagi6_hmbs_alphafold.ipynb`]  |             |
-| 🗒 [`35_cagi6_hmbs_el2.ipynb`]        |             |
-| 🗒 [`35_cagi6_hmbs_rosetta.ipynb`]    |             |
-| 🗒 [`35_cagi6_sherloc_el2.ipynb`]     |             |
-| 🗒 [`40_cagi6_hmbs_submission.ipynb`] |             |
-
-[`30_cagi6_hmbs.ipynb`]: notebooks/30_cagi6_hmbs.ipynb
-[`35_cagi6_hmbs_alphafold.ipynb`]: notebooks/35_cagi6_hmbs_alphafold.ipynb
-[`35_cagi6_hmbs_el2.ipynb`]: notebooks/35_cagi6_hmbs_el2.ipynb
-[`35_cagi6_hmbs_rosetta.ipynb`]: notebooks/35_cagi6_hmbs_rosetta.ipynb
-[`35_cagi6_sherloc_el2.ipynb`]: notebooks/35_cagi6_sherloc_el2.ipynb
-[`40_cagi6_hmbs_submission.ipynb`]: notebooks/40_cagi6_hmbs_submission.ipynb
-
-</details>
-
-<details open>
-<summary><b>Submissions</b></summary>
-
-| Filename                     | Description                                                                                 |
-| ---------------------------- | ------------------------------------------------------------------------------------------- |
-| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                        |
-| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                   |
-| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                        |
-| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                |
-| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein . |
-
-</details>
-
-### CAM
-
-<details open>
-<summary><b>Relevant notebooks</b></summary>
-
-| Name                                | Description                                                    |
-| ----------------------------------- | -------------------------------------------------------------- |
-| 🗒 [`40_cagi6_cam_submission.ipynb`] | Load the CAM dataset, generate features, and make predictions. |
-
-[`40_cagi6_cam_submission.ipynb`]: notebooks/40_cagi6_cam_submission.ipynb
-
-</details>
-
-<details open>
-<summary><b>Submissions</b></summary>
-
-| Filename                     | Description                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                    |
-| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
-| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
-| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
-| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
-| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
-
-</details>
-
-### MAPK1
-
-<details open>
-<summary><b>Relevant notebooks</b></summary>
-
-| Name                                  | Description                                                      |
-| ------------------------------------- | ---------------------------------------------------------------- |
-| 🗒 [`40_cagi6_mapk1_submission.ipynb`] | Load the MAPk1 dataset, generate features, and make predictions. |
-
-[`40_cagi6_mapk1_submission.ipynb`]: notebooks/40_cagi6_mapk1_submission.ipynb
-
-</details>
-
-<details open>
-<summary><b>Submissions</b></summary>
-
-| Filename                     | Description                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                    |
-| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
-| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
-| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
-| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
-| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
-
-</details>
-
-### MAPK3
-
-<details open>
-<summary><b>Relevant notebooks</b></summary>
-
-| Name                                  | Description                                                      |
-| ------------------------------------- | ---------------------------------------------------------------- |
-| 🗒 [`40_cagi6_mapk3_submission.ipynb`] | Load the MAPk3 dataset, generate features, and make predictions. |
-
-[`40_cagi6_mapk3_submission.ipynb`]: notebooks/40_cagi6_mapk3_submission.ipynb
-
-</details>
-
-<details open>
-<summary><b>Submissions</b></summary>
-
-| Filename                     | Description                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                    |
-| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
-| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
-| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
-| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
-| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
-
-</details>
-
-### MTHFR
-
-<details open>
-<summary><b>Relevant notebooks</b></summary>
-
-| Name                                  | Description                                                      |
-| ------------------------------------- | ---------------------------------------------------------------- |
-| 🗒 [`40_cagi6_mthfr_submission.ipynb`] | Load the MTHFR dataset, generate features, and make predictions. |
-
-[`40_cagi6_mthfr_submission.ipynb`]: notebooks/40_cagi6_mthfr_submission.ipynb
-
-</details>
-
-<details open>
-<summary><b>Submissions</b></summary>
-
-| Filenames                                                                                                                                        | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| `ostrokach_cataWT_model_1.tsv` <br /> `ostrokach_cataAV_model_1.tsv` <br /> `ostrokach_reguWT_model_1.tsv` <br /> `ostrokach_reguAV_model_1.tsv` | Predictions were made using ELASPIC2 [1] and were adjusted to match the target distribution.      |
-| `ostrokach_cataWT_model_2.tsv` <br /> `ostrokach_cataAV_model_2.tsv` <br /> `ostrokach_reguWT_model_2.tsv` <br /> `ostrokach_reguAV_model_2.tsv` | Predictions were made using ProteinSolver [2] and were adjusted to match the target distribution. |
-| `ostrokach_cataWT_model_3.tsv` <br /> `ostrokach_cataAV_model_3.tsv` <br /> `ostrokach_reguWT_model_3.tsv` <br /> `ostrokach_reguAV_model_3.tsv` | Predictions were made using ProtBert [3] and were adjusted to match the target distribution.      |
-| `ostrokach_cataWT_model_4.tsv` <br /> `ostrokach_cataAV_model_4.tsv` <br /> `ostrokach_reguWT_model_4.tsv` <br /> `ostrokach_reguAV_model_4.tsv` | Predictions were made using ELASPIC2 [1] without any subsequent adjustment.                       |
-| `ostrokach_cataWT_model_5.tsv` <br /> `ostrokach_cataAV_model_5.tsv` <br /> `ostrokach_reguWT_model_5.tsv` <br /> `ostrokach_reguAV_model_5.tsv` | Predictions were made using ProteinSolver [2] without any subsequent adjustment.                  |
-| `ostrokach_cataWT_model_6.tsv` <br /> `ostrokach_cataAV_model_6.tsv` <br /> `ostrokach_reguWT_model_6.tsv` <br /> `ostrokach_reguAV_model_6.tsv` | Predictions were made using ProtBert [3] without any subsequent adjustment.                       |
 
 </details>
 
