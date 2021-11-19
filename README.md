@@ -144,7 +144,7 @@ For the Sherloc clinical classification challenge, we trained new models using b
 | `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                   |
 | `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                        |
 | `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                |
-| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold features for wildtype protein . |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein . |
 
 </details>
 
@@ -170,8 +170,8 @@ For the Sherloc clinical classification challenge, we trained new models using b
 | `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
 | `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
 | `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
-| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold features for wildtype protein .             |
-| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold features for wildtype and mutant proteins . |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
 
 </details>
 
@@ -197,8 +197,8 @@ For the Sherloc clinical classification challenge, we trained new models using b
 | `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
 | `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
 | `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
-| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold features for wildtype protein .             |
-| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold features for wildtype and mutant proteins . |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
 
 </details>
 
@@ -224,8 +224,8 @@ For the Sherloc clinical classification challenge, we trained new models using b
 | `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
 | `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
 | `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
-| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold features for wildtype protein .             |
-| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold features for wildtype and mutant proteins . |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold [5] features for wildtype and mutant proteins . |
 
 </details>
 
