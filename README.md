@@ -1,78 +1,25 @@
-# CAGI6 submission
+# CAGI6 challenge
 
-- [CAGI6 submission](#cagi6-submission)
-  - [HMBS](#hmbs)
-  - [](#)
-  - [](#1)
-  - [Sherloc clinical classification](#sherloc-clinical-classification)
-    - [Compare feature importances of structural methods](#compare-feature-importances-of-structural-methods)
+- [New models (ELASPIC3)](#new-models-elaspic3)
+  - [Compare feature importances of structural methods](#compare-feature-importances-of-structural-methods)
     - [With humsavar](#with-humsavar)
     - [Do not weigh probable and likely mutations differently](#do-not-weigh-probable-and-likely-mutations-differently)
-    - [Set `metric="binary_logloss"` and `is_unbalance=True`](#set-metric%22binarylogloss%22-and-isunbalancetrue)
-- [Submission for CAGI6—CAM challenge](#submission-for-cagi6cam-challenge)
-  - [Overview](#overview)
-  - [References](#references)
+    - [Set `metric="binary_logloss"` and `is_unbalance=True`](#set-metricbinary_logloss-and-is_unbalancetrue)
+- [Submissions](#submissions)
+  - [Sherloc clinical classification](#sherloc-clinical-classification)
+  - [HMBS](#hmbs)
+  - [CAM](#cam)
+  - [MAPK1](#mapk1)
+  - [MAPK3](#mapk3)
+  - [MTHFR](#mthfr)
+- [References](#references)
 
-## Submissions
+## New models (ELASPIC3)
 
-### MTHFR
-
-**Relevant notebooks:**
-
-| Name | Description |
-| ---- | ----------- |
-|      |             |
-
-### CAM
-
-**Relevant notebooks:**
-
-| Name                                | Description |
-| ----------------------------------- | ----------- |
-| 🗒 [`40_cagi6_cam_submission.ipynb`] |             |
-
-### MAPK1
-
-**Relevant notebooks:**
-
-| Name | Description |
-| ---- | ----------- |
-|      |             |
-
-### MAPK3
-
-**Relevant notebooks:**
-
-| Name | Description |
-| ---- | ----------- |
-|      |             |
-
-### HMBS
-
-**Relevant notebooks:**
-
-| Name                                 | Description |
-| ------------------------------------ | ----------- |
-| 🗒 [`30_cagi6_hmbs.ipynb`]            |             |
-| 🗒 [`35_cagi6_hmbs_alphafold.ipynb`]  |             |
-| 🗒 [`35_cagi6_hmbs_el2.ipynb`]        |             |
-| 🗒 [`35_cagi6_hmbs_rosetta.ipynb`]    |             |
-| 🗒 [`35_cagi6_sherloc_el2.ipynb`]     |             |
-| 🗒 [`40_cagi6_hmbs_submission.ipynb`] |             |
-
-[`30_cagi6_hmbs.ipynb`]: notebooks/30_cagi6_hmbs.ipynb
-[`35_cagi6_hmbs_alphafold.ipynb`]: notebooks/35_cagi6_hmbs_alphafold.ipynb
-[`35_cagi6_hmbs_el2.ipynb`]: notebooks/35_cagi6_hmbs_el2.ipynb
-[`35_cagi6_hmbs_rosetta.ipynb`]: notebooks/35_cagi6_hmbs_rosetta.ipynb
-[`35_cagi6_sherloc_el2.ipynb`]: notebooks/35_cagi6_sherloc_el2.ipynb
-[`40_cagi6_hmbs_submission.ipynb`]: notebooks/40_cagi6_hmbs_submission.ipynb
-
-### Sherloc clinical classification
-
-For the Sherloc clinical classification challenge, we trained new models using both the provided training data and the mutations listed in the UniProt [_humsavar.txt_](https://www.uniprot.org/docs/humsavar.txt) file.
+We trained multiple models using different sets of features.
 
 <details open>
-<summary><b>Description of models that were trained:</b></summary>
+<summary><b>Description of models that were trained</b></summary>
 
 | code        | features                                   | machine           |
 | ----------- | ------------------------------------------ | ----------------- |
@@ -91,12 +38,46 @@ For the Sherloc clinical classification challenge, we trained new models using b
 
 </details>
 
+### Compare feature importances of structural methods
+
+| code       | features                                                           | machine           |
+| ---------- | ------------------------------------------------------------------ | ----------------- |
+| `6d02ae59` | `proteinsolver-protbert-rosetta_ddg-alphafold_wt`                  | Graham (44 cores) |
+| `b2d0dfb9` | `proteinsolver-protbert-rosetta_ddg-alphafold_wt-alphafold_change` | Graham (44 cores) |
+| `1855e7a4` | `proteinsolver`                                                    | Graham (44 cores) |
+| `a6b35daa` | `protbert`                                                         | Graham (44 cores) |
+| `2cf623ec` | `rosetta_ddg`                                                      | Graham (44 cores) |
+| `bfda8ca8` | `alphafold_wt`                                                     | Graham (44 cores) |
+| `b93fddbb` | `alphafold_change`                                                 | Graham (44 cores) |
+
+#### With humsavar
+
+- `f6be01c3`
+
+#### Do not weigh probable and likely mutations differently
+
+- `678e7e39` | `base` + `AFwt` (no weights)
+- `c8fef37f` | `base` + `AFwt+mut` (no weights)
+
+#### Set `metric="binary_logloss"` and `is_unbalance=True`
+
+Did not work out well (weird feature elimination curves and lower accuracy in the end)
+
+- `3d9abe70` | `base` + `AFwt` (binary_logloss + is_unbalance)
+- `38af39b4` `13edb1b7` [`base` + `AFwt` + `AFmut` (binary_logloss + is_unbalance) ]
+
+## Submissions
+
+### Sherloc clinical classification
+
+For the Sherloc clinical classification challenge, we trained new models using both the provided training data and the mutations listed in the UniProt [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file.
+
 <details open>
 <summary><b>Relevant notebooks</b></summary>
 
 | Name                                         | Description                                                                  |
 | -------------------------------------------- | ---------------------------------------------------------------------------- |
-| 🗒 [`30_cagi6_sherloc.ipynb`]                 | Load the CAGI6 Sherloc dataset.                                              |
+| 🗒 [`30_cagi6_sherloc.ipynb`]                 | Load the Sherloc dataset.                                                    |
 | 🗒 [`30_humsavar.ipynb`]                      | Load the humsavar dataset.                                                   |
 | 🗒 [`31_run_alphafold_wt.ipynb`]              | Generate AlphaFold embeddings.                                               |
 | 🗒 [`31_run_msa_analysis.ipynb`]              | Generate basic MSA features.                                                 |
@@ -126,44 +107,154 @@ For the Sherloc clinical classification challenge, we trained new models using b
 
 </details>
 
-#### Compare feature importances of structural methods
+<details open>
+<summary><b>Submissions</b></summary>
 
-| code       | features                                                           | machine           |
-| ---------- | ------------------------------------------------------------------ | ----------------- |
-| `6d02ae59` | `proteinsolver-protbert-rosetta_ddg-alphafold_wt`                  | Graham (44 cores) |
-| `b2d0dfb9` | `proteinsolver-protbert-rosetta_ddg-alphafold_wt-alphafold_change` | Graham (44 cores) |
-| `1855e7a4` | `proteinsolver`                                                    | Graham (44 cores) |
-| `a6b35daa` | `protbert`                                                         | Graham (44 cores) |
-| `2cf623ec` | `rosetta_ddg`                                                      | Graham (44 cores) |
-| `bfda8ca8` | `alphafold_wt`                                                     | Graham (44 cores) |
-| `b93fddbb` | `alphafold_change`                                                 | Graham (44 cores) |
+</details>
 
-#### With humsavar
+### HMBS
 
-- `f6be01c3`
+<details open>
+<summary><b>Relevant notebooks</b></summary>
 
-#### Do not weigh probable and likely mutations differently
+| Name                                 | Description |
+| ------------------------------------ | ----------- |
+| 🗒 [`30_cagi6_hmbs.ipynb`]            |             |
+| 🗒 [`35_cagi6_hmbs_alphafold.ipynb`]  |             |
+| 🗒 [`35_cagi6_hmbs_el2.ipynb`]        |             |
+| 🗒 [`35_cagi6_hmbs_rosetta.ipynb`]    |             |
+| 🗒 [`35_cagi6_sherloc_el2.ipynb`]     |             |
+| 🗒 [`40_cagi6_hmbs_submission.ipynb`] |             |
 
-- `678e7e39` | `base` + `AFwt` (no weights)
-- `c8fef37f` | `base` + `AFwt+mut` (no weights)
+[`30_cagi6_hmbs.ipynb`]: notebooks/30_cagi6_hmbs.ipynb
+[`35_cagi6_hmbs_alphafold.ipynb`]: notebooks/35_cagi6_hmbs_alphafold.ipynb
+[`35_cagi6_hmbs_el2.ipynb`]: notebooks/35_cagi6_hmbs_el2.ipynb
+[`35_cagi6_hmbs_rosetta.ipynb`]: notebooks/35_cagi6_hmbs_rosetta.ipynb
+[`35_cagi6_sherloc_el2.ipynb`]: notebooks/35_cagi6_sherloc_el2.ipynb
+[`40_cagi6_hmbs_submission.ipynb`]: notebooks/40_cagi6_hmbs_submission.ipynb
 
-#### Set `metric="binary_logloss"` and `is_unbalance=True`
+</details>
 
-Did not work out well (weird feature elimination curves and lower accuracy in the end)
+<details open>
+<summary><b>Submissions</b></summary>
 
-- `3d9abe70` | `base` + `AFwt` (binary_logloss + is_unbalance)
-- `38af39b4` `13edb1b7` [`base` + `AFwt` + `AFmut` (binary_logloss + is_unbalance) ]
+| Filename                     | Description                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                        |
+| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                   |
+| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                        |
+| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold features for wildtype protein . |
 
-# Submission for CAGI6—CAM challenge
+</details>
 
-## Overview
+### CAM
 
-- `strokach_modelnumber_1.tsv` → Predictions made using ELASPIC2 [1].
-- `strokach_modelnumber_2.tsv` → Predictions made using ProteinSolver [2].
-- `strokach_modelnumber_3.tsv` → Predictions made using ProtBert [3].
-- `strokach_modelnumber_4.tsv` → Predictions made using Rosetta's cartesian_ddg protocol [4].
-- `strokach_modelnumber_5.tsv` → Predictions made using ELASPIC2 [5] with AlphaFold features for wildtype protein.
-- `strokach_modelnumber_6.tsv` → Predictions made using ELASPIC2 [5] with AlphaFold features for wildtype and mutant proteins.
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                | Description                                                    |
+| ----------------------------------- | -------------------------------------------------------------- |
+| 🗒 [`40_cagi6_cam_submission.ipynb`] | Load the CAM dataset, generate features, and make predictions. |
+
+[`40_cagi6_cam_submission.ipynb`]: notebooks/40_cagi6_cam_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filename                     | Description                                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                    |
+| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
+| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
+| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold features for wildtype and mutant proteins . |
+
+</details>
+
+### MAPK1
+
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                  | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| 🗒 [`40_cagi6_mapk1_submission.ipynb`] | Load the MAPk1 dataset, generate features, and make predictions. |
+
+[`40_cagi6_mapk1_submission.ipynb`]: notebooks/40_cagi6_mapk1_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filename                     | Description                                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                    |
+| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
+| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
+| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold features for wildtype and mutant proteins . |
+
+</details>
+
+### MAPK3
+
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                  | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| 🗒 [`40_cagi6_mapk3_submission.ipynb`] | Load the MAPk3 dataset, generate features, and make predictions. |
+
+[`40_cagi6_mapk3_submission.ipynb`]: notebooks/40_cagi6_mapk3_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filename                     | Description                                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                                    |
+| `strokach_modelnumber_2.tsv` | Predictions made using ProteinSolver [2].                                                               |
+| `strokach_modelnumber_3.tsv` | Predictions made using ProtBert [3].                                                                    |
+| `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                            |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold features for wildtype protein .             |
+| `strokach_modelnumber_6.tsv` | Predictions made using ELASPIC3 [`900500fe`] with AlphaFold features for wildtype and mutant proteins . |
+
+</details>
+
+### MTHFR
+
+<details open>
+<summary><b>Relevant notebooks</b></summary>
+
+| Name                                  | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| 🗒 [`40_cagi6_mthfr_submission.ipynb`] | Load the MTHFR dataset, generate features, and make predictions. |
+
+[`40_cagi6_mthfr_submission.ipynb`]: notebooks/40_cagi6_mthfr_submission.ipynb
+
+</details>
+
+<details open>
+<summary><b>Submissions</b></summary>
+
+| Filenames                                                                                                                                        | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| `ostrokach_cataWT_model_1.tsv` <br /> `ostrokach_cataAV_model_1.tsv` <br /> `ostrokach_reguWT_model_1.tsv` <br /> `ostrokach_reguAV_model_1.tsv` | Predictions were made using ELASPIC2 [1] and were adjusted to match the target distribution.      |
+| `ostrokach_cataWT_model_2.tsv` <br /> `ostrokach_cataAV_model_2.tsv` <br /> `ostrokach_reguWT_model_2.tsv` <br /> `ostrokach_reguAV_model_2.tsv` | Predictions were made using ProteinSolver [2] and were adjusted to match the target distribution. |
+| `ostrokach_cataWT_model_3.tsv` <br /> `ostrokach_cataAV_model_3.tsv` <br /> `ostrokach_reguWT_model_3.tsv` <br /> `ostrokach_reguAV_model_3.tsv` | Predictions were made using ProtBert [3] and were adjusted to match the target distribution.      |
+| `ostrokach_cataWT_model_4.tsv` <br /> `ostrokach_cataAV_model_4.tsv` <br /> `ostrokach_reguWT_model_4.tsv` <br /> `ostrokach_reguAV_model_4.tsv` | Predictions were made using ELASPIC2 [1] without any subsequent adjustment.                       |
+| `ostrokach_cataWT_model_5.tsv` <br /> `ostrokach_cataAV_model_5.tsv` <br /> `ostrokach_reguWT_model_5.tsv` <br /> `ostrokach_reguAV_model_5.tsv` | Predictions were made using ProteinSolver [2] without any subsequent adjustment.                  |
+| `ostrokach_cataWT_model_6.tsv` <br /> `ostrokach_cataAV_model_6.tsv` <br /> `ostrokach_reguWT_model_6.tsv` <br /> `ostrokach_reguAV_model_6.tsv` | Predictions were made using ProtBert [3] without any subsequent adjustment.                       |
+
+</details>
 
 ## References
 
