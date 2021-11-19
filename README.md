@@ -229,7 +229,7 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 | `strokach_modelnumber_4.tsv` | Predictions made using Rosetta's cartesian_ddg protocol [4].                                    |
 | `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC3 [`7f9826be`] with AlphaFold [5] features for wildtype protein . |
 
-<https://www.synapse.org/#!Synapse:syn26159218/files/>
+Synapse project: <https://www.synapse.org/#!Synapse:syn26159218/files/>.
 
 </details>
 
