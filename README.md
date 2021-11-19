@@ -72,8 +72,6 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 <http://genomeinterpretation.org/cagi6-cam.html>
 
-<https://www.synapse.org/#!Synapse:syn26145788/files/>
-
 <details open>
 <summary><b>Relevant notebooks</b></summary>
 
@@ -87,6 +85,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 <details open>
 <summary><b>Submissions</b></summary>
+
+<https://www.synapse.org/#!Synapse:syn26145788/files/>
 
 | Filename                     | Description                                                                                                 |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -103,8 +103,6 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 <http://genomeinterpretation.org/cagi6-mapk1.html>
 
-<https://www.synapse.org/#!Synapse:syn26145783/files/>
-
 <details open>
 <summary><b>Relevant notebooks</b></summary>
 
@@ -118,6 +116,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 <details open>
 <summary><b>Submissions</b></summary>
+
+<https://www.synapse.org/#!Synapse:syn26145783/files/>
 
 | Filename                     | Description                                                                                                 |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -134,8 +134,6 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 <http://genomeinterpretation.org/cagi6-mapk3.html>
 
-<https://www.synapse.org/#!Synapse:syn26145778/files/>
-
 <details open>
 <summary><b>Relevant notebooks</b></summary>
 
@@ -149,6 +147,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 
 <details open>
 <summary><b>Submissions</b></summary>
+
+<https://www.synapse.org/#!Synapse:syn26145778/files/>
 
 | Filename                     | Description                                                                                                 |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -164,8 +164,6 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 ### MTHFR
 
 <http://genomeinterpretation.org/cagi6-mthfr.html>
-
-<https://www.synapse.org/#!Synapse:syn25891794/files/>
 
 <details open>
 <summary><b>Relevant notebooks</b></summary>
@@ -183,6 +181,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 <details open>
 <summary><b>Submissions</b></summary>
 
+<https://www.synapse.org/#!Synapse:syn25891794/files/>
+
 | Filenames                                                                                                                                        | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
 | `ostrokach_cataWT_model_1.tsv` <br /> `ostrokach_cataAV_model_1.tsv` <br /> `ostrokach_reguWT_model_1.tsv` <br /> `ostrokach_reguAV_model_1.tsv` | Predictions were made using ELASPIC2 [1] and were adjusted to match the target distribution.      |
@@ -197,8 +197,6 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 ### HMBS
 
 <http://genomeinterpretation.org/cagi6-hmbs.html>
-
-<https://www.synapse.org/#!Synapse:syn26159218/files/>
 
 <details open>
 <summary><b>Relevant notebooks</b></summary>
@@ -223,6 +221,8 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 <details open>
 <summary><b>Submissions</b></summary>
 
+<https://www.synapse.org/#!Synapse:syn26159218/files/>
+
 | Filename                     | Description                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 [1].                                                            |
@@ -236,8 +236,6 @@ Did not work out well (weird feature elimination curves and lower accuracy in th
 ### Sherloc
 
 <http://genomeinterpretation.org/cagi6-invitae.html>
-
-<https://www.synapse.org/#!Synapse:syn26272013/files/>
 
 For the Sherloc clinical classification challenge, we trained new models using both the provided training data and the mutations listed in the UniProt [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file.
 
@@ -278,6 +276,9 @@ For the Sherloc clinical classification challenge, we trained new models using b
 
 <details open>
 <summary><b>Submissions</b></summary>
+
+<https://www.synapse.org/#!Synapse:syn26272013/files/>
+
 
 </details>
 
