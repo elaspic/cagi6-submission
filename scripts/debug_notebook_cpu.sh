@@ -25,7 +25,7 @@ if [[ $host =~ "blg" ]] ; then
   SINGULARITY_BINDS="--bind /lustre01 --bind /lustre02 --bind /lustre03 --bind /lustre04"
 elif [[ $host =~ "nia" ]] ; then
   SINGULARITY_BINDS="--bind /scratch --bind /project --bind /gpfs"
-elif [[ $host =~ "ng" ]] || [[ $host =~ "nc" ]] ; then
+elif [[ $host =~ "ng" ]] || [[ $host =~ "nc" ]] || [[ $host =~ "nl" ]] ; then
   SINGULARITY_BINDS="--bind /scratch --bind /project --bind /lustre05 --bind /lustre06 --bind /lustre07 --bind /localscratch"
 else
   SINGULARITY_BINDS="--bind /scratch --bind /project"
