@@ -36,7 +36,7 @@ OUTPUT_TAG="${SLURM_ARRAY_JOB_ID}-${SLURM_ARRAY_TASK_ID}-${SLURM_JOB_NODELIST}-$
 
 echo ${NOTEBOOK_PATH} ${NOTEBOOK_STEM} ${NOTEBOOK_DIR} ${OUTPUT_TAG}
 
-singularity exec ${SINGULARITY_BINDS} \
+singularity exec --bind /cvmfs ${SINGULARITY_BINDS} \
   --env PYTHONPATH="$(realpath ~/workspace/elaspic2/src)" \
   ~/singularity/default-v48b.sif \
   bash -c "

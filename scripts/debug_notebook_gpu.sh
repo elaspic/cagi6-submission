@@ -31,7 +31,7 @@ else
 fi
 echo $host $SINGULARITY_BINDS
 
-singularity exec ${SINGULARITY_BINDS} --nv \
+singularity exec --bind /cvmfs ${SINGULARITY_BINDS} --nv \
   --env PYTHONPATH="$(realpath ~/workspace/elaspic2/src)" \
   ~/singularity/default-v48b.sif \
   bash -c "
