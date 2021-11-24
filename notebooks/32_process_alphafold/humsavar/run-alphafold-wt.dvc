@@ -1,0 +1,5 @@
+outs:
+- md5: e4f4d052385d341928c13cbbc5ecff5c.dir
+  size: 1554703299
+  nfiles: 27
+  path: run-alphafold-wt

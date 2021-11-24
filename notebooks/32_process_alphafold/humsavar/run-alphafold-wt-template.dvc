@@ -1,0 +1,5 @@
+outs:
+- md5: 2e126d4a631ca80fdfadb5161fe63da8.dir
+  size: 1554466646
+  nfiles: 27
+  path: run-alphafold-wt-template
