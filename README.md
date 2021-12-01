@@ -2,13 +2,13 @@
 
 - [ELASPIC3 overview](#elaspic3-overview)
   - [Compare the relative importance of different features](#compare-the-relative-importance-of-different-features)
-- [Individual challenges](#individual-challenges)
-  - [CAM](#cam)
+- [Individual submissions](#individual-submissions)
+  - [Calmodulin](#calmodulin)
   - [MAPK1](#mapk1)
   - [MAPK3](#mapk3)
   - [MTHFR](#mthfr)
   - [HMBS](#hmbs)
-  - [Sherloc](#sherloc)
+  - [Sherloc clinical classification](#sherloc-clinical-classification)
 - [References](#references)
 
 ## ELASPIC3 overview
@@ -48,9 +48,9 @@ We trained multiple models using different sets of features.
 | `2cf623ec` | `base` + `rosetta_ddg`                                                                   | Graham (44 cores) |
 |            | `base` (amino acid types and MSA mutual information and relative entropy)                | Graham (44 cores) |
 
-## Individual challenges
+## Individual submissions
 
-### CAM
+### Calmodulin
 
 Overview: <http://genomeinterpretation.org/cagi6-cam.html>.
 
@@ -215,7 +215,7 @@ Our submission: <https://www.synapse.org/#!Synapse:syn26159218/files/>.
 
 </details>
 
-### Sherloc
+### Sherloc clinical classification
 
 For the Sherloc clinical classification challenge, we trained new models using both the provided training data and the mutations listed in the UniProt [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file.
 
