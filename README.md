@@ -1,6 +1,12 @@
 # CAGI6 community assessment
 
-- [ELASPIC3 overview](#elaspic3-overview)
+- [Methods](#methods)
+  - [ELASPIC3 overview](#elaspic3-overview)
+  - [Models that were used to featurize mutations](#models-that-were-used-to-featurize-mutations)
+  - [Ablation experiments](#ablation-experiments)
+  - [Supervised performance](#supervised-performance)
+  - [Unsupervised (one-shot) performance](#unsupervised-one-shot-performance)
+  - [Training details](#training-details)
   - [Compare the relative importance of different features](#compare-the-relative-importance-of-different-features)
 - [Individual submissions](#individual-submissions)
   - [Calmodulin](#calmodulin)
@@ -11,9 +17,29 @@
   - [Sherloc clinical classification](#sherloc-clinical-classification)
 - [References](#references)
 
-## ELASPIC3 overview
+## Methods
 
-> ELASPIC3 ≔ ELASPIC2 + AlphaFold 😛
+### ELASPIC3 overview
+
+ELASPIC3 is a gradient-boosted decision tree model which uses features generated using pretrained deep neural networks to predict the effect of mutations. In contrast to its predecessor ELASPIC2 [1], ELASPIC3 incorporates features extracted from multiple sequence alignments (MSAs), including the embeddings produced by AlphaFold [5]. ELASPIC3 is trained solely to predict whether a mutation is deleterious or benign, using mutations in the UniParc [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file and in the CAGI6 Sherloc dataset as the training data.
+
+### Models that were used to featurize mutations
+
+| Name              | Description |
+| ----------------- | ----------- |
+| ProteinSolver [2] |             |
+| ProtBERT [3]      |             |
+| Rosetta ΔΔG [4]   |             |
+| AlphaFold [5]     |             |
+| MSA               |             |
+
+### Ablation experiments
+
+### Supervised performance
+
+### Unsupervised (one-shot) performance
+
+### Training details
 
 We trained multiple models using different sets of features.
 
