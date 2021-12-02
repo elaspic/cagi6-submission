@@ -42,8 +42,10 @@ On the CAGI6 Sherloc [progress tracker](https://progress-tracker.jungla.bio/), t
 
 ### Unsupervised (one-shot) performance
 
-<img src="docs/images/45_validate_models/unsupervised-auc-curve.svg" />
-<img src="docs/images/45_validate_models/unsupervised-pr-curve.svg" />
+<p align="center">
+<img src="docs/images/45_validate_models/unsupervised-auc-curve.svg" width="49%" />
+<img src="docs/images/45_validate_models/unsupervised-pr-curve.svg" width="49%" />
+</p>
 
 ## Individual submissions
 
