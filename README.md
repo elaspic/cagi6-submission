@@ -2,12 +2,11 @@
 
 - [Introduction](#introduction)
 - [Methods](#methods)
-  - [Models that were used to featurize mutations](#models-that-were-used-to-featurize-mutations)
+  - [Feature generation](#feature-generation)
+  - [Final model performance](#final-model-performance)
   - [Ablation experiments](#ablation-experiments)
   - [Supervised performance](#supervised-performance)
   - [Unsupervised (one-shot) performance](#unsupervised-one-shot-performance)
-  - [Training details](#training-details)
-  - [Compare the relative importance of different features](#compare-the-relative-importance-of-different-features)
 - [Individual submissions](#individual-submissions)
   - [Calmodulin](#calmodulin)
   - [MAPK1](#mapk1)
@@ -23,7 +22,7 @@
 
 ## Methods
 
-### Models that were used to featurize mutations
+### Feature generation
 
 | Name              | Description |
 | ----------------- | ----------- |
@@ -33,46 +32,15 @@
 | AlphaFold [5]     |             |
 | MSA               |             |
 
+### Final model performance
+
+On the CAGI6 Sherloc [progress tracker](https://progress-tracker.jungla.bio/), the final model achieved an AUC of 0.946, a recall at 0.8 precision of 0.866, and a TNR at 0.95 NPV of 0.697. It does not appear to be the best-performing method...
+
 ### Ablation experiments
 
 ### Supervised performance
 
 ### Unsupervised (one-shot) performance
-
-### Training details
-
-We trained multiple models using different sets of features.
-
-<details>
-<summary><b>Description of models that were trained</b></summary>
-
-| code        | features                                   | machine           |
-| ----------- | ------------------------------------------ | ----------------- |
-| `7f9826be`† | `base` + `AFwt`                            | Graham (44 cores) |
-| `fd28687b`  | `base` + `AFwt`                            | Beluga (30 cores) |
-| `900500fe`† | `base` + `AFwt` + `AFmut`                  | Beluga (30 cores) |
-| `be3bdad5`  | `base` + `AFwt` + `AFmut`                  | Graham (44 cores) |
-| `6999e5aa`  | `base` + `EL2` + `AFwt`                    | Graham (44 cores) |
-| `4df6fd79`  | `base` + `EL2` + `AFwt` + `AFmut` [no opt] | Graham (44 cores) |
-| `0d59c727`  | `base`                                     | Beluga (30 cores) |
-| `eabf01fe`  | `base` - `rosetta`                         | Graham (44 cores) |
-| `eabf01fe`  | `base` - `rosetta`                         | Graham (44 cores) |
-| `a7b1c747`  | `base` - `rosetta` - `ps`                  | Graham (44 cores) |
-
-</details>
-
-### Compare the relative importance of different features
-
-| code       | features                                                                                 | machine           |
-| ---------- | ---------------------------------------------------------------------------------------- | ----------------- |
-| `6d02ae59` | `base` + `proteinsolver` + `protbert` + `rosetta_ddg` + `alphafold_wt`                   | Graham (44 cores) |
-| `b2d0dfb9` | `base` + `proteinsolver` + `protbert` + `rosetta_ddg` + `alphafold_wt` + `alphafold_mut` | Graham (44 cores) |
-| `bfda8ca8` | `base` + `alphafold_wt`                                                                  | Graham (44 cores) |
-| `b93fddbb` | `base` + `alphafold_mut`                                                                 | Graham (44 cores) |
-| `a6b35daa` | `base` + `protbert`                                                                      | Graham (44 cores) |
-| `1855e7a4` | `base` + `proteinsolver`                                                                 | Graham (44 cores) |
-| `2cf623ec` | `base` + `rosetta_ddg`                                                                   | Graham (44 cores) |
-|            | `base` (amino acid types and MSA mutual information and relative entropy)                | Graham (44 cores) |
 
 ## Individual submissions
 
@@ -286,6 +254,15 @@ Our submission: <https://www.synapse.org/#!Synapse:syn26272013/files/>.
 
 <details>
 <summary><b>Submission files</b></summary>
+
+| Filename                     | Description                                                                                                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `strokach_modelnumber_1.tsv` | Predictions made using ELASPIC2 with AlphaFold [4] features for wildtype protein (trained using both Sherloc and humsavar data). All available AlphaFold embeddings were used by the model. |
+| `strokach_modelnumber_2.tsv` | Predictions made using ELASPIC2 with AlphaFold [4] features for wildtype protein (trained using both Sherloc and humsavar data).                                                            |
+| `strokach_modelnumber_3.tsv` | Predictions made using ELASPIC2 with AlphaFold [4] features for wildtype protein (trained only using Sherloc data).                                                                         |
+| `strokach_modelnumber_4.tsv` | Predictions made using ELASPIC2 with AlphaFold [4] features for wildtype and mutant proteins (trained only using Sherloc data).                                                             |
+| `strokach_modelnumber_5.tsv` | Predictions made using ELASPIC2 [1].                                                                                                                                                        |
+| `strokach_modelnumber_6.tsv` | Predictions made using AlphaFold [4].                                                                                                                                                       |
 
 </details>
 
