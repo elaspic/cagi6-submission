@@ -18,7 +18,7 @@
 
 ## Introduction
 
-**_ELASPIC3_** is a gradient-boosted decision tree model which uses features generated using pretrained deep neural networks to predict the effect of mutations. In contrast to its predecessor ELASPIC2 [1], ELASPIC3 incorporates features extracted from multiple sequence alignments (MSAs), including the embeddings produced by AlphaFold [5]. ELASPIC3 is trained solely to predict whether a mutation is deleterious or benign, using mutations in the UniParc [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file and in the CAGI6 Sherloc dataset as the training data.
+**_ELASPIC3 (EL3)_** is a gradient-boosted decision tree model which uses features generated using pretrained deep neural networks to predict the effect of mutations. In contrast to its predecessor ELASPIC2 [1], ELASPIC3 incorporates features extracted from multiple sequence alignments (MSAs), including the embeddings produced by AlphaFold [5]. ELASPIC3 is trained solely to predict whether a mutation is deleterious or benign, using mutations in the UniParc [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file and in the CAGI6 Sherloc dataset as the training data.
 
 ## Methods
 
