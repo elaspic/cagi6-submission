@@ -1,9 +1,12 @@
 [core]
-    remote = myremote
+    remote = cloud
 [cache]
     type = "hardlink,symlink"
 ['remote "myremote"']
     url = /home/strokach/data/dvcstore
 ['remote "niagara"']
     url = /home/p/pmkim/strokach/data/dvcstore
-
+['remote "cloud"']
+    url = s3://elaspic2
+    endpointurl = https://yzhlfjnswpjg.compat.objectstorage.ca-toronto-1.oraclecloud.com
+    region = ca-toronto-1
