@@ -1,6 +1,8 @@
 import json
 
 import lightgbm as lgb
+import numpy as np
+import pandas as pd
 
 
 def load_features(notebook_dir, unique_id):
@@ -77,3 +79,25 @@ def load_best_models(notebook_dir, unique_id, model_type):
     assert len(models) == 6
 
     return models
+
+
+def expand_arrays(input_df, vector_features):
+    row = next(input_df[vector_features].itertuples(index=False))._asdict()
+
+    expanded_vector_dfs = []
+    column_group_map = {}
+    expanded_vector_features = []
+    for column, data in row.items():
+        new_columns = [f"{column}_{i}" for i in range(len(data))]
+        expanded_vector_features += new_columns
+        column_group_map |= {nc: column for nc in new_columns}
+        new_df = pd.DataFrame(np.vstack(input_df[column].values), columns=new_columns)
+        expanded_vector_dfs.append(new_df)
+
+    remaining_features = [c for c in input_df if c not in vector_features]
+
+    return (
+        pd.concat([input_df[remaining_features].reset_index(drop=True)] + expanded_vector_dfs, axis=1),
+        column_group_map,
+        expanded_vector_features,
+    )
