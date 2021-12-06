@@ -18,29 +18,44 @@
 
 ## Introduction
 
-**_ELASPIC3 (EL3)_** is a gradient-boosted decision tree model which uses features generated using pretrained deep neural networks to predict the effect of mutations. In contrast to its predecessor ELASPIC2 [1], ELASPIC3 incorporates features extracted from multiple sequence alignments (MSAs), including the embeddings produced by AlphaFold [5]. ELASPIC3 is trained solely to predict whether a mutation is deleterious or benign, using mutations in the UniParc [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file and in the CAGI6 Sherloc dataset as the training data.
+**_ELASPIC3 (EL3)_** is a gradient-boosted decision tree model which uses features generated using pretrained deep neural networks to predict the effect of mutations. In contrast to its predecessor ELASPIC2 [1], ELASPIC3 incorporates features extracted from multiple sequence alignments (MSAs), including the embeddings produced by AlphaFold [5]. ELASPIC3 is trained solely to predict whether a mutation is deleterious or benign, using mutations in the UniParc [humsavar.txt](https://www.uniprot.org/docs/humsavar.txt) file and the CAGI6 Sherloc dataset as the training data.
 
 ## Methods
 
 ### Feature generation
 
-| Name              | Description |
-| ----------------- | ----------- |
-| ProteinSolver [2] |             |
-| ProtBERT [3]      |             |
-| Rosetta ΔΔG [4]   |             |
-| AlphaFold [5]     |             |
-| MSA               |             |
+| Name          | Description                                                                                                                                                                                                                                          |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AlphaFold     | AlphaFold [5] is a deep neural network which takes as input an MSA and, optionally, structural templates, and predicts the structure of the protein as well as other properties, including the probability distribution for each residue in the MSA. |
+| MSA           | The multiple sequence alignment (MSA) is processed to extract various statistics, including the number of times the wild type and mutant residues appear in a given position.                                                                        |
+| ProtBERT      | ProtBERT [3] is a deep neural network trained to reconstruct masked amino acids in millions of protein sequences.                                                                                                                                    |
+| ProteinSolver | ProteinSolver [2] is a graph neural network trained to reconstruct masked amino acids given the distagram describing the topology of the protein.                                                                                                    |
+| Rosetta ΔΔG   | Rosetta [2] uses a semi-empirical energy function to evaluate the stability of the wild type and the mutant proteins. We use the `cartesian_ddg` protocol to obtain energy terms that are averaged over different protein conformations.             |
 
 ### Final model performance
 
-On the CAGI6 Sherloc [progress tracker](https://progress-tracker.jungla.bio/), the final model achieved an AUC of 0.946, a recall at 0.8 precision of 0.866, and a TNR at 0.95 NPV of 0.697. It does not appear to be the best-performing method...
+On the CAGI6 Sherloc [progress tracker](https://progress-tracker.jungla.bio/), the final ELASPIC3 model achieved an AUC of 0.946, a recall at 0.8 precision of 0.866, and a TNR at 0.95 NPV of 0.697. It does not appear to be the best-performing method... Nevertheless, it still performs better than ELASPIC2.
+
+<img src="docs/images/45_validate_models/el3-vs-el2-auc-curve.svg" />
+<img src="docs/images/45_validate_models/el3-vs-el2-pr-curve.svg" />
 
 ### Ablation experiments
 
+We evaluated the relative contribution of each feature generation method to the final performance of ELASPIC3 by training models that use features generated using all but one of the methods.
+
+<img src="docs/images/45_validate_models/ablation-auc-curve.svg" />
+<img src="docs/images/45_validate_models/ablation-pr-curve.svg" />
+
 ### Supervised performance
 
+We also evaluated the ability of each method independently to predict the effect of mutations by training models that use features generated using only one of the methods.
+
+<img src="docs/images/45_validate_models/supervised-auc-curve.svg" />
+<img src="docs/images/45_validate_models/supervised-pr-curve.svg" />
+
 ### Unsupervised (one-shot) performance
+
+Finally, we evaluated the ability of the different models to predict the effect of mutations without supervised fine-tuning. We compare methods using a single feature from each method that shows the highest AUC in predicting mutation deleteriousness.
 
 <img src="docs/images/45_validate_models/unsupervised-auc-curve.svg" />
 <img src="docs/images/45_validate_models/unsupervised-pr-curve.svg" />
