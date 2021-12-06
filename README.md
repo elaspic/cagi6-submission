@@ -41,21 +41,21 @@ On the CAGI6 Sherloc [progress tracker](https://progress-tracker.jungla.bio/), t
 
 ### Ablation experiments
 
-We evaluated the relative contribution of each feature generation method to the final performance of ELASPIC3 by training models that use features generated using all but one of the methods.
+We evaluated the relative contribution of each feature generation method to the final performance of ELASPIC3 by training models that use features generated using all but one of the methods. The most substantial decrease in performance arises when we exclude features generated using AlphaFold.
 
 <img src="docs/images/45_validate_models/ablation-auc-curve.svg" />
 <img src="docs/images/45_validate_models/ablation-pr-curve.svg" />
 
 ### Supervised performance
 
-We also evaluated the ability of each method independently to predict the effect of mutations by training models that use features generated using only one of the methods.
+We also evaluated the ability of each method independently to predict the effect of mutations by training models that use features generated using only one of the methods. Using only the features generated with AlphaFold, we are able to train a model that shows comparable performance to the ELASPIC3 model trained using the entire feature set.
 
 <img src="docs/images/45_validate_models/supervised-auc-curve.svg" />
 <img src="docs/images/45_validate_models/supervised-pr-curve.svg" />
 
 ### Unsupervised (one-shot) performance
 
-Finally, we evaluated the ability of the different models to predict the effect of mutations without supervised fine-tuning. We compare methods using a single feature from each method that shows the highest AUC in predicting mutation deleteriousness.
+Finally, we evaluated the ability of the different models to predict the effect of mutations without supervised fine-tuning. We compare methods based on a single feature from each method that shows the highest AUC in predicting mutation deleteriousness.
 
 <img src="docs/images/45_validate_models/unsupervised-auc-curve.svg" />
 <img src="docs/images/45_validate_models/unsupervised-pr-curve.svg" />
