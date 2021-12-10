@@ -1,0 +1,33 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mjslee/CCMpred/CCMpred/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_04833/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_04833.dir/build.make CMakeFiles/cmTC_04833.dir/build
+gmake[1]: Entering directory `/home/mjslee/CCMpred/CCMpred/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_04833.dir/CheckSymbolExists.c.o
+/cvmfs/soft.computecanada.ca/custom/bin/cc   -std=c99 -O3 -fno-strict-aliasing -g    -o CMakeFiles/cmTC_04833.dir/CheckSymbolExists.c.o   -c /home/mjslee/CCMpred/CCMpred/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_04833
+/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/cmake/3.12.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04833.dir/link.txt --verbose=1
+/cvmfs/soft.computecanada.ca/custom/bin/cc -std=c99 -O3 -fno-strict-aliasing -g     CMakeFiles/cmTC_04833.dir/CheckSymbolExists.c.o  -o cmTC_04833 
+CMakeFiles/cmTC_04833.dir/CheckSymbolExists.c.o: In function `main':
+/home/mjslee/CCMpred/CCMpred/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_04833] Error 1
+gmake[1]: Leaving directory `/home/mjslee/CCMpred/CCMpred/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_04833/fast] Error 2
+
+File /home/mjslee/CCMpred/CCMpred/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
